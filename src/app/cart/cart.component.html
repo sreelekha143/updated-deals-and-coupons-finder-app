@@ -1,0 +1,51 @@
+<div class="container">
+<div class="row pt-5">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-4" *ngFor="let i of item">
+      <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+        <div class="card-body">
+         
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <img class="img" src="{{i.imageurl}}" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-8">
+                <span>id :{{i.id}}</span>
+              </div>
+              
+            </div>
+            <div class="row">
+              <div class="col-sm-8">
+                <span>name :{{i.name}}</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-8">
+                <span>price :{{i.price|currency:'Rs.'}}</span>
+              </div>
+            </div>
+            <!-- <div class="row">
+              <div class="col-sm-8">
+                <span>rating:{{i.rating}}</span> 
+                  </div>
+            </div> -->
+          </div>
+          <i class="fa fa-minus" (click)="Increment('down',i)"></i>
+
+          &nbsp; &nbsp; {{i.ordervalue}}   &nbsp; 
+          <i class="fa fa-plus" style="margin-left: 15px;" (click)="Increment('up',i)"></i>
+          
+
+    <button class="btn btn-danger" (click)="deleteFromCart(i)" style="margin-right: 0px; margin-left: 100px;">Delete</button> 
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-warning" style="margin: 2% 0 6% 23%;
+  width: 50%;
+  color: floralwhite;" (click)="order()">Place Order</button> 
+</div>
+
+

@@ -1,0 +1,9 @@
+.head{
+    color: white;
+}
+.fa-shopping-cart:before {
+    margin-right:100px;
+    content: "\f07a";
+    color: white;
+    font-size: 30px
+}
